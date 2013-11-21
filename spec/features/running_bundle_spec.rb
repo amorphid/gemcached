@@ -2,7 +2,13 @@ require "spec_helper"
 
 feature "Running 'bundle'" do
   context "without the required packages" do
-    scenario "indicates a new error has been found"
+    given(:response) { "Bundle generated an error.  We haven't seen this one before." }
+    given(:error) { "Bundle generated an error.  We haven't seen this one before." }
+
+    scenario "indicates a new error has been found" do
+      expect(response).to have_content(error)
+    end
+
     scenario "shows a recommended solution"
   end
 
