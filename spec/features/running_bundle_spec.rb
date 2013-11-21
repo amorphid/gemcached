@@ -7,6 +7,11 @@ feature "Running 'bundle'" do
   end
 
   context "with the required files" do
-    scenario "congratulates user for successful install"
+    given(:response) { "Bundle ran successfully.  You win!" }
+    given(:success) { "Bundle ran successfully.  You win!" }
+
+    scenario "congratulates user for successful install" do
+      expect(response).to have_content(success)
+    end
   end
 end
