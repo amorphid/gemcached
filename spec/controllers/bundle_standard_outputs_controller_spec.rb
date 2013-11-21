@@ -7,5 +7,9 @@ describe BundleStandardOutputsController do
     it "returns a success message" do
       expect(response).to eq("Bundle ran successfully.  You win!")
     end
+
+    it "returns a message saying a new error has been found" do
+      expect(response).to eq("Bundle generated an error.  We haven't seen this one before.")
+    end
   end
 end
