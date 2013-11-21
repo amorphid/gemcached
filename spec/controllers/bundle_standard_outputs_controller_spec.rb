@@ -1,7 +1,7 @@
 require "spec_helper"
 
 describe BundleStandardOutputsController do
-  context "#new" do
+  context "#response" do
     let(:response) { BundleStandardOutputsController.new.response }
 
     it "returns a success message" do
