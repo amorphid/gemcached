@@ -7,7 +7,7 @@ feature "Running 'bundle'" do
   end
 
   context "with the required files" do
-    given(:response) { "Bundle ran successfully.  You win!" }
+    given(:response) { BundleStandardOutputsController.new }
     given(:success) { "Bundle ran successfully.  You win!" }
 
     scenario "congratulates user for successful install" do
